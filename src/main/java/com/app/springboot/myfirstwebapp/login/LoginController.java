@@ -15,15 +15,12 @@ public class LoginController {
 	@Autowired
 	private AuthenticationService authenticationService;
 	
-//	public LoginController(AuthenticationService authenticationService) {
-//		super();
-//		this.authenticationService = authenticationService;
-//	}
 	
 	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String gotoLoginPage() {
 		return "login";
 	}
+	
 	
 	@RequestMapping(value = "login", method = RequestMethod.POST)
 	public String gotoWelcomePage(@RequestParam String name, @RequestParam String password, ModelMap model) {
