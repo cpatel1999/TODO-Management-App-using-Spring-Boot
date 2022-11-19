@@ -54,12 +54,8 @@ public class SpringSecurityConfiguration {
 	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-		try {
-			http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		http.authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
 		http.formLogin(withDefaults());
 		
 		http.csrf().disable();
