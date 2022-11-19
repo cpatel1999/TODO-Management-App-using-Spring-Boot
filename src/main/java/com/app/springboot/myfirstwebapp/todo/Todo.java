@@ -26,6 +26,8 @@ public class Todo {
 	private LocalDate targetDate;
 	private boolean done;
 
+	public Todo() {}
+	
 	public Todo(int id, String usernameString, String descriptionString, LocalDate targetDate, boolean done) {
 		super();
 		this.id = id;
